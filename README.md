@@ -1,7 +1,7 @@
 Django 1.7 and Python 3.3 on OpenShift
 ====================================
 
-This is an adaptation of rancavil's quickstart for Django 1.6 running on OpenShift.
+This is an adaptation of [rancavil](https://github.com/rancavil/)'s quickstart for Django 1.6 running on OpenShift.
 
 Django 1.7 brings some significant changes, not least those that remove the need to
 use South to manage migrations.
@@ -60,6 +60,8 @@ Add this upstream repo
      cd <your-app-name>
      git remote add upstream -m master git://github.com/michaeljpeake/django1.7-python3-openshift-quickstart.git
      git pull -s recursive -X theirs upstream master
+
+michaeljpeake: At this point, you will be faced with a Vi window asking you to add a commit comment. For this initial commit, you can leave this blank. If you are not familiar with Vi or Vim, press `Shift+:`, then type `wq`, then press `Enter` (or Return if you're that way inclined). Then go and read about Vi; it's really handy.
 
 ####Note:
 If you want to use the Redis-Cloud with Django see [the wiki](https://github.com/rancavil/django-py3-openshift-quickstart/wiki/Django-1.6-with-Redis-Cloud) 
