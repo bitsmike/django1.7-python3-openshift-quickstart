@@ -45,7 +45,7 @@ Install the RHC client tools if you have not already done so:
 
 Create a python-3.3 application
 
-     rhc app create djangopy3 python-3.3
+     rhc create-app <your-app-name> python-3.3
 
 Or create the application python-3.3 with the admin web console.
 
@@ -53,12 +53,12 @@ Or create the application python-3.3 with the admin web console.
 
 Connect into your OpenShift account and Add Application and select Python 3.3.
 
-Create the Python application with the name djangopy3.
+Create the Python application with the name <your-app-name>.
 
 Add this upstream repo
 
-     cd djangopy3
-     git remote add upstream -m master git://github.com/rancavil/django-py3-openshift-quickstart.git
+     cd <your-app-name>
+     git remote add upstream -m master git://github.com/michaeljpeake/django1.7-python3-openshift-quickstart.git
      git pull -s recursive -X theirs upstream master
 
 ####Note:
@@ -73,7 +73,7 @@ special attention.
 	
 That's it. You can now checkout your application at:
 
-     http://djangopy3-$yournamespace.rhcloud.com
+     http://<your-app-name>-$yournamespace.rhcloud.com
 
 Admin user name and password
 ----------------------------
