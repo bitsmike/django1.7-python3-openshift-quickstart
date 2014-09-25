@@ -1,7 +1,16 @@
-Django 1.6 and Python 3 on OpenShift
+Django 1.7 and Python 3.3 on OpenShift
 ====================================
 
-This git repository helps you get up and running quickly w/ a Django 1.6 and
+This is an adaptation of rancavil's quickstart for Django 1.6 running on OpenShift.
+
+Django 1.7 brings some significant changes, not least those that remove the need to
+use South to manage migrations.
+
+The following text is adapted from rancavil.
+
+====================================
+
+This git repository helps you get up and running quickly w/ a Django 1.7 and
 Python 3.3 installation on OpenShift.  The Django project name used in this
 repo is 'openshift' but you can feel free to change it.  Right now the
 backend is sqlite3 and the database runtime is found in
@@ -23,7 +32,7 @@ statements in `GIT_ROOT/.openshift/action_hooks/alter.sql` and then use
 `GIT_ROOT/.openshift/action_hooks/deploy` to execute that script (make
 sure to back up your database w/ `rhc app snapshot save` first :) )
 
-With this you can install Django 1.6 with Python 3.3 on OpenShift.
+With this you can install Django 1.7 with Python 3.3 on OpenShift.
 
 Running on OpenShift
 --------------------
@@ -155,7 +164,7 @@ On OpenShift, Django is served through wsgi, like cherrypy, this package can be 
      # Put here required packages or
      # Uncomment one or more lines below in the install_requires section
      # for the specific client drivers/modules your application needs.
-     packages = ['Django<=1.6',
+     packages = ['Django==1.7',
                  'static3',  # If you want serve the static files in the same server
                   #  'mysql-connector-python',
                   #  'pymongo',
@@ -167,7 +176,7 @@ On OpenShift, Django is served through wsgi, like cherrypy, this package can be 
            packages.append('hiredis')
 
      setup(name='YourAppName', version='1.0',
-           description='OpenShift Python-3.3 / Django-1.6 Community Cartridge based application',
+           description='OpenShift Python-3.3 / Django-1.7 Community Cartridge based application',
            author='Your Name', author_email='admin@example.org',
            url='https://pypi.python.org/pypi',
            install_requires=packages,
